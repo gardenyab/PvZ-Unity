@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 085215d13e6ea7947950a5502bfd2845
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8938786278199408915
+    second: "\u575A\u679C\u5899_0"
+  - first:
+      213: 5310540791880975281
+    second: "\u575A\u679C\u5899_1"
+  - first:
+      213: 2370816454833519640
+    second: "\u575A\u679C\u5899_2"
+  - first:
+      213: -5833515857120041389
+    second: "\u575A\u679C\u5899_3"
+  - first:
+      213: 8285875992944301681
+    second: "\u575A\u679C\u5899_4"
+  - first:
+      213: 7266669233210268172
+    second: "\u575A\u679C\u5899_5"
+  - first:
+      213: -835006898041844618
+    second: "\u575A\u679C\u5899_6"
+  - first:
+      213: 1481031895995466757
+    second: "\u575A\u679C\u5899_7"
+  - first:
+      213: 2140533618152147837
+    second: "\u575A\u679C\u5899_8"
+  - first:
+      213: 5630833049487028707
+    second: "\u575A\u679C\u5899_9"
+  - first:
+      213: 4601825259044042515
+    second: "\u575A\u679C\u5899_10"
+  - first:
+      213: -6416792820939009079
+    second: "\u575A\u679C\u5899_11"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wallnut_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 428
+        width: 358
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25c67fdc12e2944f8fc7ea8dcca5ca2
+      internalID: 2033441163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wallnut_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 360
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfec0c2f75feda24ab0517094e2ac01a
+      internalID: 370306680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wallnut_6
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 4
+        width: 358
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5421bb15af19f74d992d1072bd1f122
+      internalID: -535969824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b2265d83319258446b65d61678b55fb9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Wallnut_0: 2033441163
+      Wallnut_1: 370306680
+      Wallnut_10: 1141784949
+      Wallnut_2: -1794958231
+      Wallnut_3: -495857979
+      Wallnut_4: 1858336942
+      Wallnut_5: 742334443
+      Wallnut_6: -535969824
+      Wallnut_7: -892547065
+      Wallnut_8: 416370572
+      Wallnut_9: 608995132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
