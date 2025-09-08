@@ -1,11 +1,11 @@
-
-*.meta linguist-detectable=false
-*.unity linguist-detectable=false
-*.prefab linguist-detectable=false
-*.mat linguist-detectable=false
-*.shader linguist-detectable=false
-*.asset linguist-detectable=false
-*.json linguist-detectable=false
-*.xml linguist-detectable=false
+*.cpp linguist-detectable=false
+*.c linguist-detectable=false
+*.h linguist-detectable=false
+*.hpp linguist-detectable=false
+CMakeLists.txt linguist-detectable=false
+*.cmake linguist-detectable=false
+*.hlsl linguist-detectable=false
+*.cginc linguist-detectable=false
+*.compute linguist-detectable=false
 
 *.cs linguist-language=C#
