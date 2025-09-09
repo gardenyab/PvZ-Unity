@@ -33,3 +33,6 @@
 1. Склонируй репозиторий:
    ```bash
    git clone https://github.com/gardenyab/PvZ-Unity.git
+2. Установите **Unity 6000.0.56f1**
+3. Добавьте проект
+   __+__ > __From disk__
