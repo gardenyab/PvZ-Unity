@@ -2,6 +2,13 @@
 
 > ⚠️ **Фанатский движок**, вдохновлённый Plants vs Zombies. Не связан с EA/PopCap. Название используется исключительно для обозначения жанра и не претендует на торговую марку.
 
+<p align="center">
+  <a href="https://t.me/GardenDev" target="_blank">
+    <img src="https://img.shields.io/badge/Join%20Telegram-Click%20Here-blue?style=for-the-badge&logo=telegram" alt="Telegram Button"/>
+  </a>
+</p>
+
+
 [![Telegram](https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram)](https://t.me/GardenDev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/gardenyab/PvZ-Unity)
 ![GitHub language count](https://img.shields.io/github/languages/count/gardenyab/PvZ-Unity)
