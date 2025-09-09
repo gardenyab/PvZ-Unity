@@ -9,7 +9,6 @@
 </p>
 
 
-[![Telegram](https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram)](https://t.me/GardenDev)
 ![GitHub repo size](https://img.shields.io/github/repo-size/gardenyab/PvZ-Unity)
 ![GitHub language count](https://img.shields.io/github/languages/count/gardenyab/PvZ-Unity)
 ![GitHub top language](https://img.shields.io/github/languages/top/gardenyab/PvZ-Unity)
