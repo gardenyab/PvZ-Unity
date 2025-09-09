@@ -1,7 +1,3 @@
-# 🌱 PvZOnUnity
-
-> ⚠️ **Фанатский движок**, вдохновлённый Plants vs Zombies. Не связан с EA/PopCap. Название используется исключительно для обозначения жанра и не претендует на торговую марку.
-
 <p align="center">
   <a href="https://t.me/GardenDev" target="_blank">
     <img src="https://img.shields.io/badge/Join%20Telegram-Click%20Here-blue?style=for-the-badge&logo=telegram" alt="Telegram Button"/>
@@ -14,6 +10,9 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/gardenyab/PvZ-Unity)
 ![License](https://img.shields.io/github/license/gardenyab/PvZ-Unity)
 
+# 🌱 PvZOnUnity
+
+> ⚠️ **Фанатский движок**, вдохновлённый Plants vs Zombies. Не связан с EA/PopCap. Название используется исключительно для обозначения жанра и не претендует на торговую марку.
 ---
 
 ## 🎮 О проекте
