@@ -17,6 +17,7 @@ public class PlantSlot : MonoBehaviour
     public bool tile = true;
     [Header("Фон слота")]
     public Image BGSprite;
+    public float rechargeTime = 1;
 
     private GameManager gms;
     public AudioSource selectSound;
@@ -27,9 +28,22 @@ public class PlantSlot : MonoBehaviour
     public float speed = 1f;
     private Vector3 pos1;
     private Vector3 pos2;
+    private bool canPlant = true;
+    public bool rechargeOnStart = false;
+    public Animator slotAnimator;
+    public string myId = "plant";
+    private bool recharged = false;
 
     private void Start()
     {
+        try
+        {
+            slotAnimator = gameObject.GetComponent<Animator>();
+        }
+        catch
+        {
+            Debug.Log("Нету аниматора");
+        }
         startPos = transform.position;
         pos1 = startPos;
         pos2 = startPos;
@@ -49,9 +63,9 @@ public class PlantSlot : MonoBehaviour
                     {
                         Debug.Log("OK");
                         mySlot = i;
-                        pos1 = startPos;
-                        pos2 = i.GetComponent<Transform>().position; //Vector3.Lerp(startPos, i.GetComponent<Transform>().position, speed * Time.fixedDeltaTime);
-                        i.GetComponent<InventorySlot>().plant = "test";
+                        transform.position = i.GetComponent<Transform>().position;
+                        //pos2 = i.GetComponent<Transform>().position; Vector3.Lerp(startPos, i.GetComponent<Transform>().position, speed * Time.fixedDeltaTime);
+                        i.GetComponent<InventorySlot>().plant = myId;
                         selected = true;
                         break;
                     }
@@ -61,13 +75,13 @@ public class PlantSlot : MonoBehaviour
             else
             {
                 selected = false;
-                pos2 = startPos;
-                pos1 = mySlot.GetComponent<Transform>().position;
+                transform.position = startPos;
                 mySlot.GetComponent<InventorySlot>().plant = "none";
             }
         }
         else
         {
+            if (!canPlant) return;
             if (gms.currentPlant == plantObject && gms.currentPlantSprite == plantSprite)
             {
                 gms.currentPlant = null;
@@ -78,7 +92,7 @@ public class PlantSlot : MonoBehaviour
                 if (gms.suns >= price)
                 {
                     selectSound.Play();
-                    gms.BuyPlant(plantObject, plantSprite, price, tile);
+                    gms.BuyPlant(gameObject, plantObject, plantSprite, price, tile);
                 }
                 else
                 {
@@ -90,16 +104,41 @@ public class PlantSlot : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(pos1, pos2, speed * Time.deltaTime);
-        if (gms.suns >= price)
+        if (gms.gameStatus == "game")
         {
-            icon.color = new Color(255, 255, 255);
-            BGSprite.color = new Color(255, 255, 255);
+            bool hide = true;
+            foreach (GameObject i in gms.inventory)
+            {
+                if (i.GetComponent<InventorySlot>().plant == myId)
+                {
+                    hide = false;
+                    break;
+                }
+                else hide = true;
+            }
+
+            print(hide);
+
+            if (hide == true) gameObject.SetActive(false);
         }
-        else
+
+        if (gms.gameStatus == "game")
         {
-            icon.color = new Color(125, 125, 125);
-            BGSprite.color = new Color(125, 125, 125);
+            if (recharged && rechargeOnStart)
+            {
+                recharged = true;
+                recharge();
+            }
+            if (gms.suns >= price)
+            {
+                icon.color = new Color(1f, 1f, 1f);
+                BGSprite.color = new Color(1f, 1f, 1f);
+            }
+            else
+            {
+                icon.color = new Color(0.49f, 0.49f, 0.49f);
+                BGSprite.color = new Color(0.49f, 0.49f, 0.49f);
+            }
         }
     }
 
@@ -115,7 +154,16 @@ public class PlantSlot : MonoBehaviour
         {
             icon.enabled = false;
         }
+    }
+    public void recharge()
+    {
+        slotAnimator.SetTrigger("recharge");
+        canPlant = false;
+        slotAnimator.speed = 1f / rechargeTime;
+    }
 
-        
+    public void rechargeEnd()
+    {
+        canPlant = true;
     }
 }

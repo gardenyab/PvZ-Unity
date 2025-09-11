@@ -4,6 +4,11 @@ public class Bullet : MonoBehaviour
 {
     public int damage = 1;
     public float speed = 0.8f;
+    
+    private void Start()
+    {
+        Destroy(gameObject, 10);
+    }
 
     private void Update()
     {

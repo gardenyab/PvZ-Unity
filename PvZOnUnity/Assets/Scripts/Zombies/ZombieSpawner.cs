@@ -56,7 +56,8 @@ public class ZombieSpawner : MonoBehaviour
                 if (id < 0 || id >= zombies.Length) continue;
 
                 int spawnPoint = Random.Range(0, spawnPoints.Length);
-                Instantiate(zombies[id], spawnPoints[spawnPoint].position, Quaternion.identity);
+                GameObject myZombie = Instantiate(zombies[id], spawnPoints[spawnPoint].position, Quaternion.identity);
+                myZombie.GetComponent<Animator>().SetTrigger("walking");
             }
         }
     }

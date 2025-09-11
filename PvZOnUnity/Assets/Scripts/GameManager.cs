@@ -14,12 +14,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI sunText;
     private int plantPrice;
     private bool setTile;
+    private GameObject currentSlot;
     public AudioSource plantSound;
     public AudioSource sunSound;
     public string gameStatus = "inventory";
 
-    public void BuyPlant(GameObject plant, Sprite sprite, int price, bool tile)
+    public void BuyPlant(GameObject slot, GameObject plant, Sprite sprite, int price, bool tile)
     {
+        currentSlot = slot;
         currentPlant = plant;
         currentPlantSprite = sprite;
         plantPrice = price;
@@ -41,9 +43,12 @@ public class GameManager : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && !hit.collider.GetComponent<Tile>().hasPlant)
             {
-                Instantiate(currentPlant, hit.collider.transform.position, Quaternion.identity);
+                GameObject myPlant = Instantiate(currentPlant, hit.collider.transform.position, Quaternion.identity);
+                myPlant.GetComponent<Plant>().tile = hit.collider.gameObject;
+                currentSlot.GetComponent<PlantSlot>().recharge();
                 currentPlant = null;
                 currentPlantSprite = null;
+                currentSlot = null;
                 suns -= plantPrice;
                 plantPrice = 0;
                 plantSound.Play();

@@ -86,7 +86,7 @@ public class Zombie : MonoBehaviour
         yield return new WaitForSeconds(time - time / 1.5f);
     }
 
-    public void Hit(int damage)
+    public void Hit(int damage, string deadType = "standart")
     {
         health -= damage;
         splat.clip = splats[Random.Range(0, splats.Length - 1)];
@@ -95,20 +95,29 @@ public class Zombie : MonoBehaviour
         {
             canMove = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            animator.SetBool("isEat", false);
-            animator.SetTrigger("die");
-            falling.clip = fallings[Random.Range(0, fallings.Length - 1)];
-            falling.Play();
+            if (deadType == "standart")
+            {
+                animator.SetBool("isEat", false);
+                animator.SetTrigger("die");
+                falling.clip = fallings[Random.Range(0, fallings.Length - 1)];
+                falling.Play();
+            }
+            else if (deadType == "destroy")
+            {
+                Kill();
+            }
         }
         if (health <= 5 && !lostHand)
-            {
-                animator.SetTrigger("lostHand");
-                lostHand = true;
-            }
+        {
+            animator.SetTrigger("lostHand");
+            lostHand = true;
+        }
     }
 
     private void Kill()
     {
         Destroy(gameObject);
     }
+
+    
 }
